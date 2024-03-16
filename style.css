@@ -238,6 +238,49 @@ input[type="submit"]:focus, input[type="button"]:focus {
 .button-container {
     text-align: center;
 }
+.aside {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    overflow-y: auto; /* Включение вертикальной прокрутки */
+    max-height: 72vh; /* Максимальная высота блока */
+}
+.aside h3 {
+    font-size: 30px;
+}
+.aside h3, .aside p {
+    text-align: center;
+    overflow: hidden;
+}
+.content {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    overflow-y: auto; /* Включение вертикальной прокрутки */
+    max-height: 72vh; /* Максимальная высота блока */
+}
+.content h3{
+    text-align: center;
+    font-size: 30px;
+}
+.content p {
+    text-indent: 20px;
+}
+.content img {
+    width: 200px;
+    height: 300px;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
 @media screen and (max-width: 768px) {
     .menu {
         display: none;
@@ -251,7 +294,10 @@ input[type="submit"]:focus, input[type="button"]:focus {
         padding: 20px;
         box-sizing: border-box;
     }
-
+    .content img {
+        width: 150px;
+        height: 200px;
+    }
     .menu li {
         margin-right: 0;
         margin-bottom: 10px;

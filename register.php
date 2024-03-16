@@ -1,6 +1,6 @@
 <?php
 session_start();
-$title = 'Регистрация:';
+$title = 'Регистрация';
 $_SESSION['title'] = $title;
 require_once "documents/make_head.php"; ?>
 <body>

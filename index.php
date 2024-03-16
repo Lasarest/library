@@ -37,17 +37,17 @@ require_once 'documents/make_menu.php';
             while($row = mysqli_fetch_assoc($result)) {
                 echo '<tr>';
                 echo "<td>". $start_count ."</td>";
-                echo "<td><a class='link' href=''>". $row["book_name"] ."</a></td>";
+                echo "<td><a class='link' href='book_page.php?book=". $row["book_name"] ."'>". $row["book_name"] ."</a></td>";
                 $genre_id = $row["genre_id"];
                 $genre_query = "SELECT genre_name FROM genres WHERE id = '$genre_id'";
                 $genre_result = mysqli_query($conn, $genre_query);
                 $genre_name = mysqli_fetch_assoc($genre_result)['genre_name'];
-                echo "<td><a class='link' href=''>". $genre_name ."</a></td>";
+                echo "<td><a class='link' href='genre_page.php?genre=". $genre_name ."'>". $genre_name ."</a></td>";
                 $author_id = $row["author_id"];
                 $author_query = "SELECT author_name FROM authors WHERE id = '$author_id'";
                 $author_result = mysqli_query($conn, $author_query);
                 $author_name = mysqli_fetch_assoc($author_result)['author_name'];
-                echo "<td><a class='link' href=''>". $author_name ."</a></td>";
+                echo "<td><a class='link' href='author_page.php?author=". $author_name ."'>". $author_name ."</a></td>";
                 if ($is_admin == 1) {
                     echo "<td><a class='link' href=''><img class='little_button' src='images/update.png' alt='update'>     </a>";
                     echo "<a class='link' href=''><img class='little_button' src='images/trash.png' alt='delete'>     </a></td>";

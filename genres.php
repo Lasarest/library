@@ -35,7 +35,7 @@ require_once 'documents/make_menu.php';
             while($row = mysqli_fetch_assoc($result)) {
                 echo '<tr>';
                 echo "<td>". $start_count ."</td>";
-                echo "<td><a class='link' href=''>". $row["genre_name"] ."</a></td>";
+                echo "<td><a class='link' href='genre_page.php?genre=". $row["genre_name"] ."'>". $row["genre_name"] ."</a></td>";
                 if ($is_admin == 1) {
                     echo "<td><a class='link' href=''><img class='little_button' src='images/update.png' alt='update'>     </a>";
                     echo "<a class='link' href=''><img class='little_button' src='images/trash.png' alt='delete'>     </a></td>";
