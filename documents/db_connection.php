@@ -1,5 +1,5 @@
 <?php
-$servername = "95.164.44.193";
+$servername = "ilyaosfd.beget.tech";
 $username = "ilyaosfd_library";
 $password = "ItI5wwEWDALg";
 $database = "ilyaosfd_library";

@@ -65,7 +65,7 @@ require_once 'documents/make_menu.php';
 $is_admin = $_SESSION['is_admin'];
 if ($is_admin == 1) {
     echo '<div class="button-container">';
-    echo '<a class="link" href=""><button class="green-button">Добавить книгу</button></a>';
+    echo '<a class="link" href="add.php?add=genre"><button class="green-button">Добавить жанр</button></a>';
     echo '</div>';
 }
 require_once 'documents/make_footer.php';
