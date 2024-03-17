@@ -25,13 +25,6 @@ $is_admin = $_SESSION['is_admin'];
             echo "<p align='center'>Пусто!</p>";
         }
         ?>
-
-
-        <?php if ($is_admin == 1): ?>
-            <div class="button-container">
-                <a class="link" href=""><button class="green-button">Изменить контент</button></a>
-            </div>
-        <?php endif; ?>
     </div>
 
     <div class="content" style="width: 70%;">

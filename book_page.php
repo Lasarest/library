@@ -25,12 +25,6 @@ $is_admin = $_SESSION['is_admin'];
 
         <h3>Жанр:</h3>
         <p align='center'><a class='link' href='genre_page.php?genre=<?= $genre_name ?>'><?= $genre_name ?></a></p>
-
-        <?php if ($is_admin == 1): ?>
-            <div class="button-container">
-                <a class="link" href=""><button class="green-button">Изменить контент</button></a>
-            </div>
-        <?php endif; ?>
     </div>
 
     <div class="content" style="width: 70%;">
