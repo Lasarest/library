@@ -49,8 +49,8 @@ require_once 'documents/make_menu.php';
                 $author_name = mysqli_fetch_assoc($author_result)['author_name'];
                 echo "<td><a class='link' href='author_page.php?author=". $author_name ."'>". $author_name ."</a></td>";
                 if ($is_admin == 1) {
-                    echo "<td><a class='link' href=''><img class='little_button' src='images/update.png' alt='update'>     </a>";
-                    echo "<a class='link' href=''><img class='little_button' src='images/trash.png' alt='delete'>     </a></td>";
+                    echo "<td><a class='link' href='update.php?update=book&id=".$row["id"]."'><img class='little_button' src='images/update.png' alt='update'>     </a>";
+                    echo "<a class='link' href='delete.php?delete=book&book=".$row["book_name"]."'><img class='little_button' src='images/trash.png' alt='delete'>     </a></td>";
                 }
                 echo '</tr>';
                 $start_count++;
@@ -67,7 +67,7 @@ require_once 'documents/make_menu.php';
                 echo "</div>";
             }
         } else {
-            echo '<h1>Каталог на данный момент пустой!</h1>';
+            echo '<h1>Каталог на данный момент пуст!</h1>';
         }
         mysqli_close($conn);
         ?>

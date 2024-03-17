@@ -37,8 +37,8 @@ require_once 'documents/make_menu.php';
                 echo "<td>". $start_count ."</td>";
                 echo "<td><a class='link' href='author_page.php?author=". $row["author_name"] ."'>". $row["author_name"] ."</a></td>";
                 if ($is_admin == 1) {
-                    echo "<td><a class='link' href=''><img class='little_button' src='images/update.png' alt='update'>     </a>";
-                    echo "<a class='link' href=''><img class='little_button' src='images/trash.png' alt='delete'>     </a></td>";
+                    echo "<td><a class='link' href='update.php?update=author&id=".$row["id"]."'><img class='little_button' src='images/update.png' alt='update'>     </a>";
+                    echo "<a class='link' href='delete.php?delete=author&author=".$row["author_name"]."'><img class='little_button' src='images/trash.png' alt='delete'>     </a></td>";
                 }
                 echo '</tr>';
                 $start_count++;
@@ -55,7 +55,7 @@ require_once 'documents/make_menu.php';
                 echo "</div>";
             }
         } else {
-            echo '<h1>Авторов пока не добавили!</h1>';
+            echo '<h1>Список авторов пока пуст!</h1>';
         }
         mysqli_close($conn);
         ?>

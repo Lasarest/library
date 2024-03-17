@@ -21,10 +21,10 @@ $is_admin = $_SESSION['is_admin'];
 
     <div class="aside" style="width: 20%;">
         <h3>Автор книги:</h3>
-        <p><a class='link' href='author_page.php?author=<?= $author_name ?>'><?= $author_name ?></a></p>
+        <p align='center'><a class='link' href='author_page.php?author=<?= $author_name ?>'><?= $author_name ?></a></p>
 
         <h3>Жанр:</h3>
-        <p><a class='link' href='genre_page.php?genre=<?= $genre_name ?>'><?= $genre_name ?></a></p>
+        <p align='center'><a class='link' href='genre_page.php?genre=<?= $genre_name ?>'><?= $genre_name ?></a></p>
 
         <?php if ($is_admin == 1): ?>
             <div class="button-container">

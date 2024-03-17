@@ -19,10 +19,10 @@ $is_admin = $_SESSION['is_admin'];
         <?php
         if (mysqli_num_rows($book_result) > 0) {
             while($row = mysqli_fetch_assoc($book_result)) {
-                echo "<p><a class='link' href='book_page.php?book=".$row['book_name']."'>".$row['book_name']."</a></p>";
+                echo "<p align='center'><a class='link' href='book_page.php?book=".$row['book_name']."'>".$row['book_name']."</a></p>";
             }
         } else{
-            echo "<p>Пусто!</p>";
+            echo "<p align='center'>Пусто!</p>";
         }
         ?>
 
@@ -41,7 +41,7 @@ $is_admin = $_SESSION['is_admin'];
         $author_data = mysqli_fetch_assoc($author_result);
 
         echo '<h3>'.$title.'</h3>';
-        echo '<img src="images/book_images/'.$author_data['author_img'].'" alt="'.$author_data['author_img'].'">';
+        echo '<img src="images/author_images/'.$author_data['author_img'].'" alt="'.$author_data['author_img'].'">';
         echo '<p>'.$author_data['author_description'].'</p>';
         ?>
     </div>
